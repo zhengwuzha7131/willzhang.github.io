@@ -121,3 +121,109 @@ function DisplayTimeline() {
         }
     })
 }
+
+// Carousel
+
+const wrapper = document.querySelector('.wrapper');
+const carousel = document.querySelector('.carousel');
+const firstImg = carousel.querySelectorAll("img")[0];
+const imgs = document.querySelectorAll(".carousel img");
+const arrowIcons = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousel.children];
+const dots = document.querySelector(".dots");
+
+let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+let wrapperWidth = wrapper.clientWidth + 15;
+let arrowClickAllowed = true;
+let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+
+const updateDimensions = () => {
+    wrapperWidth = wrapper.clientWidth + 15;
+};
+
+imgs.forEach(img =>{
+    img.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+    });
+});
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        if(!arrowClickAllowed) return;
+        arrowClickAllowed = false;
+
+        carousel.scrollLeft += icon.id == "left" ? -wrapperWidth : wrapperWidth;
+
+        setTimeout(() => {
+            arrowClickAllowed = true;
+        }, 500);
+    })
+});
+
+const navigateToImage = (index) => {
+    carousel.scrollLeft = index * wrapperWidth;
+}
+
+const updateActiveDot = () => {
+    const currentIndex = Math.round(carousel.scrollLeft / wrapperWidth);
+    dots.querySelectorAll('li').forEach((dot, index) => {
+        dot.className = index === currentIndex ? 'active' : '';
+    });
+
+    arrowIcons[0].style.display = currentIndex === 0 ? "none" : "block";
+    arrowIcons[1].style.display = currentIndex === 4 ? "none" : "block";
+}
+
+const autoSlide = () => {
+    const halfway = wrapperWidth / 2;
+    const currentIndex = Math.floor(carousel.scrollLeft / wrapperWidth);
+    const scrollOverHalfway = (carousel.scrollLeft % wrapperWidth) > halfway;
+
+    const targetIndex = scrollOverHalfway ? currentIndex + 1 : currentIndex;
+    carousel.scrollLeft = targetIndex * wrapperWidth;
+
+        setTimeout(() => {
+            updateActiveDot();
+        }, 300);
+}
+const dragStart = (e) => {
+    isDragStart = true;
+    prevPageX = e.pageX || e.touches[0].pageX;
+    prevScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+    if(!isDragStart) return;
+    e.preventDefault();
+    isDragging = true;
+    carousel.classList.add("dragging");
+    positionDiff = (e.pageX || e.touches[0].pageX)- prevPageX;
+    carousel.scrollLeft = prevScrollLeft - positionDiff;
+    showHideIcons();
+}
+
+const dragStop = () => {
+    isDragStart = false;
+    carousel.classList.remove("dragging");
+
+    if(!isDragging) return;
+    isDragging = false;
+    autoSlide();
+}
+
+window.addEventListener("resize", updateDimensions);
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        updateDimensions();
+    }
+});
+
+carousel.addEventListener('scroll', updateActiveDot);
+wrapper.addEventListener("mousedown", dragStart);
+wrapper.addEventListener("touchstart", dragStart);
+wrapper.addEventListener("mousemove", dragging);
+wrapper.addEventListener("touchmove", dragging);
+wrapper.addEventListener("mouseup", dragStop);
+wrapper.addEventListener("mouseleave", dragStop);
+wrapper.addEventListener("touchend", dragStop);
