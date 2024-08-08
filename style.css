@@ -547,10 +547,15 @@ span {
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-direction: column;
    min-height: 100vh;
    background: black;
    position: relative;
    padding : 0 35px;
+}
+
+.projects h2{
+   margin-bottom: 3rem;
 }
 
 .wrapper{
