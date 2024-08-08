@@ -25,6 +25,7 @@ body {
    background-image: url(background.jpg);
    color: var(--text-color);
    background-size: 100%;
+   overflow: hidden;
 }
 
 /* Home */
@@ -785,7 +786,9 @@ span {
 
    .skills-container{
       grid-template-columns: repeat(3, 1fr);
+      transform: scale(0.9);
    }
+
 }
 
 @media screen and (max-width:895px){
@@ -885,6 +888,7 @@ span {
 
 @media screen and (max-width: 768px){
 
+
    #timeline ul li{
       margin-left: 50px;
    }
@@ -900,5 +904,12 @@ span {
    #timeline ul li:nth-child(even) .box:before{
       left: -15px;
       border-width: 8px 16px 8px 0;
+   }
+}
+
+@media screen and (max-width: 500px){
+   body {
+      background-size: cover;
+      
    }
 }
