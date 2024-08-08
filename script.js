@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", writeLoop);
 
 // Image transition
 
-const images = ["image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg", "image.jpeg"];
+const images = ["image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg", "image.jpg"];
 let currentImageIndex = 0;
 
 function changeImage() {

@@ -281,6 +281,8 @@ span {
 #img{
    border-radius: 7%;
    transition: opacity 2s;
+   width: 450px;
+   height: 450px;
 }
 /* Scrollbar */
 
@@ -552,6 +554,7 @@ span {
    background: black;
    position: relative;
    padding : 0 35px;
+   padding-bottom: 50px;
 }
 
 .projects h2{
@@ -727,7 +730,6 @@ span {
 
 .footer .social{
    text-align: center;
-   padding-bottom: 20px;
    color: white;
 }
 
@@ -752,7 +754,7 @@ span {
 .footer .copyright{
    margin-top: 25px;
    text-align: center;
-   font-size: 16px;
+   font-size: 14px;
    color: white;
 }
 
@@ -787,6 +789,19 @@ span {
 }
 
 @media screen and (max-width:895px){
+   .about{
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .about-img{
+      justify-content: center;
+   }
+
+   #img{
+      transform: scale(0.8);
+   }
+
    #menu-icon{
       display: block;
    }
