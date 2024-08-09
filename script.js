@@ -104,6 +104,7 @@ setInterval(changeImage, 5000);
 // Timeline
 
 const boxes = document.querySelectorAll('.box');
+const dates = document.querySelectorAll('.date');
 
 window.addEventListener('scroll', DisplayTimeline);
 DisplayTimeline();
@@ -111,13 +112,16 @@ DisplayTimeline();
 function DisplayTimeline() {
     const TriggerBottom = (window.innerHeight/5) * 4;
     
-    boxes.forEach((box)=>{
+    boxes.forEach((box, index)=>{
         const topBox = box.getBoundingClientRect().top;
+        const date = dates[index];
 
         if(topBox < TriggerBottom){
             box.classList.add("show");
+            if (date) date.classList.add("show");
         } else {
             box.classList.remove("show");
+            if (date) date.classList.remove("show");
         }
     })
 }

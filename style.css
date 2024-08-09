@@ -6,7 +6,7 @@
    border: none;
    outline: none;
    scroll-behavior: smooth;
-   font-family: "Plus Jakarta Sans", sans-serif;
+   font-family: "Centra", sans-serif;
 }
 
 :root {
@@ -36,7 +36,7 @@ body {
    left: 0;
    width: 100%;
    padding: 3rem 9%;
-   background: var(--second-bg-color);
+   background: black;
    backdrop-filter: blur(10px);
    display: flex;
    align-items: center;
@@ -324,7 +324,7 @@ span {
    align-items: center;
    text-align: center;
    grid-gap: 1rem;
-   padding: 1rem 21rem;
+   padding: 1rem 4rem;
    font-size: 1.2rem;
 }
 
@@ -455,9 +455,8 @@ span {
    background: linear-gradient(to bottom, #1d1836 99%, white 1%);
    box-shadow: 0 0 5px rgba(0,0,0,0.5);
    border-radius: 5px;
-   transform: translateX(5%);
    visibility: hidden;
-   transition: all .5s ease-in-out;
+   transition: opacity 0.3s ease-in-out;
 }
 
 #timeline ul li .box ul {
@@ -489,14 +488,12 @@ span {
 #timeline ul li:nth-child(even) .box{
    right: 415px;
    top: 7px;
-   transform: translateX(-5%);
    visibility: hidden;
 }
 
 #timeline ul li .box.show{
    visibility: visible;
-   transform: translateX(0%);
-   transition: all .5s ease-in-out;
+   animation: bounce 1s ease;
 }
 
 #timeline ul li img{
@@ -542,6 +539,41 @@ span {
    right: -15px;
    border-width: 8px 0px 8px 16px;
    border-color: transparent #1d1836;
+}
+
+#timeline ul li .date{
+   position: absolute;
+   color: #aaa6c3;
+   font-size: 1.4rem;
+   visibility: hidden;
+   transition: opacity 0.3s ease-in-out;
+}
+
+#timeline ul li .date.show{
+   visibility: visible;
+   animation: bounce 1s ease;
+}
+
+#timeline ul li:nth-child(odd) .date{
+   left: -150px;
+   top: 86px;
+}
+
+#timeline ul li:nth-child(even) .date{
+   right: -130px;
+   top: 86px;
+}
+
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-30px);
+  }
+  60% {
+      transform: translateY(-15px);
+  }
 }
 
 /* Projects */
@@ -894,7 +926,7 @@ span {
    }
    
    #timeline ul li .box{
-      width: calc(100vw - 220px);
+      width: calc(100vw - 155px);
    }
 
    #timeline ul li:nth-child(even) .box{
@@ -904,6 +936,21 @@ span {
    #timeline ul li:nth-child(even) .box:before{
       left: -15px;
       border-width: 8px 16px 8px 0;
+   }
+
+   
+   #timeline ul li:nth-child(odd) .date{
+      left: 210px;
+      top: 99px;
+      z-index: 1;
+      white-space: nowrap;
+   }
+
+   #timeline ul li:nth-child(even) .date{
+      left: 175px;
+      top: 98px;
+      z-index: 1;
+      white-space: nowrap;
    }
 }
 
