@@ -714,12 +714,34 @@ span {
 /* Contact */
 
 .contact{
+   padding-top: 4rem;
    background-color: var(--bg-color);
+   text-align: center;
 }
 
 .contact h2{
-   margin-bottom: 3rem;
-   color: white;
+   display: inline-block;
+   margin-left : 0;
+   margin-right: 0;
+   margin-bottom: 2rem;
+   color: var(--main-color);
+   position: relative;
+   overflow: hidden;
+}
+
+.contact h2::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 60%;
+   height: 3px;
+   background: var(--main-color);
+   border-radius: 10px;
+}
+
+.contact span{
+   text-shadow: 0 0 5px var(--main-color)
 }
 
 .contact form{
