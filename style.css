@@ -717,6 +717,8 @@ span {
    padding-top: 4rem;
    background-color: var(--bg-color);
    text-align: center;
+   min-height: 50vh;
+   height: 780px;
 }
 
 .contact h2{
@@ -814,6 +816,9 @@ span {
 }
 
 @media screen and (max-width:1285px){
+   .contact{
+      height: 700px;
+   }
    html{
       font-size: 55%;
    }
@@ -825,6 +830,10 @@ span {
 }
 
 @media screen and (max-width:991px){
+   .contact{
+      height: 700px;
+   }
+
    header{
       padding: 1rem 3%;
    }
@@ -846,6 +855,10 @@ span {
 }
 
 @media screen and (max-width:895px){
+   .contact{
+      height: 700px;
+   }
+
    .about{
       flex-direction: column;
       align-items: center;
@@ -941,6 +954,10 @@ span {
 }
 
 @media screen and (max-width: 768px){
+
+   .contact {
+      height: 700px;
+   }
 
 
    #timeline ul li{
