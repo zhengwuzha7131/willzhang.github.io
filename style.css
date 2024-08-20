@@ -596,7 +596,7 @@ span {
 
 .wrapper{
    max-width: 800px;
-   height: 700px;
+   height: 770px;
    position: relative;
    background: #151515;
    border-radius: 10px;
@@ -624,19 +624,52 @@ span {
    position: relative;
    text-align: center;
    margin: 7px;
-   height: 650px;
+   height: 770px;
    overflow: visible;
 }
 
-.description {
-   position: absolute;
+.description-heading {
+   position: relative;
+   width: 100%;
+   color: white;
+   padding-top: 10px;
+   text-align: center;
+   box-sizing: border-box;
+   font-size: 25px;
+   font-weight: 540;
+}
+
+.description-language{
+   position: relative;
    width: 100%;
    color: white;
    text-align: center;
    padding: 10px;
    box-sizing: border-box;
-   font-size: 16px;
+   font-size: 15px;
+   font-weight: 3000;
+   margin-bottom: 7px;
 }
+
+.description{
+   position: relative;
+   width: 100%;
+   font-size: 15px;
+   text-align: center;
+   box-sizing: border-box;
+   color: #b8b8b8;
+   margin-bottom: 20px;
+}
+
+.description-github {
+   position: relative;
+   color: white;
+   display: inline-block;
+   padding: 10px;
+   font-size: 18px;
+   border: 1px solid white;
+}
+
 
 .wrapper i:first-child{
    left: -23px;
@@ -661,7 +694,7 @@ span {
    margin-left: 14px;
    border-radius: 10px;
    max-width: 500px;
-   margin-bottom: 30px;
+   margin-bottom: 5px;
 }
 
 .carousel img:first-child{
