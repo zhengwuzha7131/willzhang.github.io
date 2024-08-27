@@ -1048,7 +1048,7 @@ span {
    .carousel img {
       max-width: 100%;
       height: auto;
-      margin: 10px 0;
+      margin: 0 0;
   }
 
   .description {
