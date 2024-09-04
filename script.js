@@ -1,10 +1,30 @@
 "use strict"
 
 //Selecting menu as well as changing active for selected nav
+"use strict"
+
+// Selecting menu as well as changing active for selected nav
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navlinks = document.querySelectorAll('header nav a');
+
+// Function to add scroll offset
+const scrollWithOffset = (event) => {
+    event.preventDefault(); 
+    const targetId = event.currentTarget.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    const offsetPosition = targetElement.offsetTop - 100;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
+};
+
+navlinks.forEach(link => {
+    link.addEventListener('click', scrollWithOffset);
+});
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -24,10 +44,6 @@ window.onscroll = () => {
     });
 };
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
 
 
 // When at top, change to background
