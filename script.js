@@ -14,7 +14,7 @@ const scrollWithOffset = (event) => {
     event.preventDefault(); 
     const targetId = event.currentTarget.getAttribute('href').substring(1);
     const targetElement = document.getElementById(targetId);
-    const offsetPosition = targetElement.offsetTop - 100;
+    const offsetPosition = targetElement.offsetTop - 60;
 
     window.scrollTo({
         top: offsetPosition,
