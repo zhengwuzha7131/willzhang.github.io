@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Zhang's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/498e6460e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Home -->
+    <header class="header">
+        <a href="#home" class="logo">William <span>Zhang</span></a>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#timeline">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="cat.png" alt="">
+        </div>
+
+        <div class="home-content">
+            <h1>Hey, it's <span>William</span></h1>
+            <h3 class="text-animation">I'm a <span id = "typewriter"></span><span id="cursor"></span></h3>
+            <p>Hello! I'm a fellow Wolverine who doesn't just tackle Big Ten rivals but also big datasets.<img src="bongo.gif" alt="" class="p-img"><br>
+                When I'm not cheering in the Big House, you can bet I'm buried somewhere in the Fish Bowl <br> 
+                plotting to turn coffee into code. Welcome and feel free to check out my resume <i class="fa-solid fa-file fa-beat"></i> below!
+            </p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/williamzhang04/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/zhengwuzha7131" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://www.instagram.com/williamzhang04?igsh=MWJncTN6dmd6eTU5bQ%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="William_Zhang_resume.pdf" target="_blank"><i class="fa-solid fa-file fa-bounce"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">A bit about <span>Me</span></h2>
+            <p>Passionate software developer and problem solver — I thrive on doing and embracing complex challenges, consistently
+                pushing the boundaries to delivery innovative and efficient <br><br>
+                When I'm not coding, I'm likely immersed in video games, working out, or spending quality time with my pets! <br><br>
+                I'm very eager to continue learning and embrace new challeneges to contribute meaningfully to dynamic teams.
+            </p>
+        </div>
+
+        <div class="about-img">
+            <img src="image.jpg" alt="" id="img">
+        </div>
+    </section>
+
+    <!-- Skills -->
+     <section class="skills" id="skills">
+            <h2 class="heading">Skills</h2>
+
+            <div class="skills-container">
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="skill-img">
+                                <img src="htmllogo.png" class="skill-icon">
+                        </div>
+                        <h3>HTML 5</h3>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="skill-img circle">
+                                <img src="csslogo.png" class="skill-icon">
+                        </div>
+                        <h3>CSS</h3>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="skill-img circle">
+                                <img src="cpplogo.png" class="skill-icon">
+                        </div>
+                        <h3>C++</h3>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="skill-img circle">
+                                <img src="pythonlogo.png" class="skill-icon">
+                        </div>
+                        <h3>Python</h3>
+                    </div>
+                </div>
+                
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="skill-img circle">
+                                <img src="javalogo.png" class="skill-icon">
+                        </div>
+                        <h3>Java</h3>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="skill-img circle">
+                                <img src="jslogo.png" class="skill-icon">
+                        </div>
+                        <h3>JavaScript</h3>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="skill-img circle">
+                                <img src="csharplogo.png" class="skill-icon">
+                        </div>
+                        <h3>C#</h3>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-title">
+                        <div class="skill-img circle">
+                                <img src="swiftlogo.png" class="skill-icon">
+                        </div>
+                        <h3>Swift/SwiftUI</h3>
+                    </div>
+                </div>
+
+            </div>
+     </section>
+
+    <!-- Experience -->
+    <section class="timeline" id="timeline">
+        <h2 class="heading">Experience</h2>
+        <ul>
+            <li>
+                <div class="timeline-logo">
+                    <img src="awslogo.png" alt="AWS">
+                </div>
+                <span class="date">May 2025 – Aug 2025</span>
+                <div class="box">
+                    <h3>Amazon Web Services (AWS)</h3>
+                    <p id="subtitle">Software Developer Intern • Arlington, Virginia</p>
+                    <ul>
+                        <li>Reduced manual qualification effort by <b>80%</b> by designing event-driven workflows in Go with back-pressure, idempotent retries, and failure isolation</li>
+                        <li>Cut firmware qualification time from <b>1-2 weeks to 1 day</b> by designing a no-touch firmware validation pipeline for 1,400+ Bering libraries</li>
+                        <li>Maintained <b>99.95% data-path availability</b> by automating drive thermal checks, DCO tests, and movement validation across 2,800+ Glacier libraries</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-logo">
+                    <img src="bumpupslogo.png" alt="Bumpups">
+                </div>
+                <span class="date">Jan 2025 – Apr 2025</span>
+                <div class="box">
+                    <h3>Bumpups</h3>
+                    <p id="subtitle">Software Engineer Intern • Remote</p>
+                    <ul>
+                        <li>Increased video analysis throughput by <b>6x</b> (from 180s to 30s) by parallelizing preprocessing and feature extraction with bounded worker pools</li>
+                        <li>Built a distributed task pipeline to process <b>10,000+ videos/week</b> using async I/O, multiprocessing, and compact serialization</li>
+                        <li>Deployed containerized microservices with Docker and optimized CI/CD workflows to reduce build time from 10 minutes to <b>under 3 minutes</b></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-logo">
+                    <img src="avodahlogo.png" alt="Avodah">
+                </div>
+                <span class="date">Sep 2024 – Dec 2024</span>
+                <div class="box">
+                    <h3>Avodah</h3>
+                    <p id="subtitle">AI Software Engineer Intern • Remote</p>
+                    <ul>
+                        <li>Developed a low-latency speech-to-text engine using a fine-tuned Soniox Transformer, improving transcription accuracy to <b>98.3%</b></li>
+                        <li>Implemented a real-time streaming pipeline in Python and C++ with buffered concurrency, reducing end-to-end latency from 5s to <b>0.9s</b></li>
+                        <li>Containerized the full pipeline on AWS ECS with autoscaling and fault-tolerant health checks, maintaining <b>99.9% uptime</b></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <img src="michiganlogo.png" class="imagetime"></img>
+                <span class="date">2023 - 2027</span>
+                <div class="box">
+                    <h3>University of Michigan College of Engineering</h3>
+                    <p id="subtitle">Bachelor of Science in Engineering - Data Science</p>
+                    <p><b>Honors:</b> Engineering Dean's List, University Honors</p>
+                    <p><b>Core CS Courses:</b></p>
+                    <ul>
+                        <li>EECS 281: Data Structures and Algorithms (C++)</li>
+                        <li>EECS 485: Web Systems</li>
+                        <li>EECS 481: Software Engineering</li>
+                        <li>EECS 445: Intro to Machine Learning</li>
+                        <li>EECS 442: Intro to Computer Vision</li>
+                        <li>EECS 388: Intro to Computer Security</li>
+                        <li>EECS 493: User Interface Development</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+
+    
+    <!-- Projects -->
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Projects</h2>
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="discordbot.png" alt="img" draggable="false">
+                    <div class="description-heading">Unite – AI-Powered Gaming Platform</div>
+                    <div class="description-language">React, TypeScript, Node.js, Socket.io, AWS</div>
+                    <div class ="description">Scaled matchmaking platform to <b>10,000+ game sessions</b> with distributed real-time infrastructure. <br>Integrated AWS Amplify, Lambda, and Step Functions maintaining <b>99.9% uptime</b> for 5,000 concurrent users.</div>
+                    <a href="https://github.com/zhengwuzha7131" class="description-github" target="_blank">Github ➔</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="discordbot.png" alt="img" draggable="false">
+                    <div class="description-heading">MatchaBot</div>
+                    <div class="description-language">Python, Discord.py, FFmpeg, OpenAI GPT-4, YoutubeDL</div>
+                    <div class ="description">Engineered a Discord bot handling <b>20,000+ active users</b> and processing 5,000+ song requests/day. <br>Enhanced community interaction with GPT-4 integration achieving 150,000+ total chat sessions.</div>
+                    <a href="https://github.com/zhengwuzha7131/MatchaBot" class="description-github" target="_blank">Github ➔</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="appointment.png" alt="img" draggable="false">
+                    <div class="description-heading">AppointmentApp</div>
+                    <div class="description-language">Swift, SwiftUI, Supabase</div>
+                    <div class ="description">Fully functional appointment app with real-time data sync using Supabase. <br>Created for my parent's spa to streamline scheduling and reduce manual work! :D</div>
+                    <a href="https://github.com/zhengwuzha7131/AppointmentApp" class="description-github" target="_blank">Github ➔</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="2048.png" alt="img" draggable="false">
+                    <div class="description-heading">High-Performance Data Pipeline</div>
+                    <div class="description-language">C++, Multi-threading, STL</div>
+                    <div class="description">Built a templated C++ data-structure library processing <b>200k+ log events/sec</b>. <br>Implemented multi-threaded graph search and knapsack heuristics, reducing scheduling latency from 120ms to <b>35ms</b>.</div>
+                    <a href="https://github.com/zhengwuzha7131" class="description-github" target="_blank">Github ➔</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="website.png" alt="img" draggable="false">
+                    <div class="description-heading">Personal Portfolio</div>
+                    <div class="description-language">HTML, CSS, JavaScript</div>
+                    <div class="description">Modern portfolio website showcasing my journey as a software engineer. <br>Features smooth animations, responsive design, and clean UI/UX!</div>
+                    <a href="https://github.com/zhengwuzha7131/willzhang.github.io" class="description-github" target="_blank">Github ➔</a>
+                </div>
+            </div>
+            <ul class="dots">
+                <li class="active" onclick="navigateToImage(0)"></li>
+                <li onclick="navigateToImage(1)"></li>
+                <li onclick="navigateToImage(2)"></li>
+                <li onclick="navigateToImage(3)"></li>
+                <li onclick="navigateToImage(4)"></li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+
+
+    </section>
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Get in touch</h2>
+        
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="input-box">
+                <input type="hidden" name="access_key" value="46def277-802d-46cd-a999-0881643f2ad4">
+                <input type="text" name="name" placeholder="First Name" required>
+                <input type="text" name="name" placeholder="Last Name" required>
+            </div>
+
+            <div class="input-box">
+                <input type="number" name="email" placeholder="Phone Number" required>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/williamzhang04/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/zhengwuzha7131" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.instagram.com/williamzhang04?igsh=MWJncTN6dmd6eTU5bQ%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+
+        <p class="copyright">© William Zhang | All Rights Reserved</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+
+</html>
